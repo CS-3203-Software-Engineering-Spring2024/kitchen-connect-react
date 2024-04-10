@@ -17,6 +17,7 @@ import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
 import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
 import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
 import GoogleIcon from './GoogleIcon';
+import { burgerWithLettuce, whiteDimSum } from '../../assets/index';
 
 interface FormElements extends HTMLFormControlsCollection {
     email: HTMLInputElement;
@@ -250,11 +251,10 @@ export default function JoySignInSideTemplate() {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
-                    backgroundImage:
-                        'url(https://images.unsplash.com/photo-1527181152855-fc03fc7949c8?auto=format&w=1000&dpr=2)',
+                    backgroundImage: `url(${whiteDimSum})`,
                     [theme.getColorSchemeSelector('dark')]: {
-                        backgroundImage:
-                            'url(https://images.unsplash.com/photo-1572072393749-3ca9c8ea0831?auto=format&w=1000&dpr=2)',
+                        backgroundImage: `url(${burgerWithLettuce})`,
+                        filter: 'brightness(0.7)',
                     },
                 })}
             />

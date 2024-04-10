@@ -6,6 +6,9 @@ import messagesIcon from './icons/messagesicon.png';
 import profileIcon from './icons/profileicon.jpg';
 import menuBurger from './icons/menuburger.png';
 import notificationIcon from './icons/notificationicon.png';
+import burgerWithLettuce from './burgerwithlettuce.jpg';
+import anhnguyen from './anhnguyen.jpg';
+import whiteDimSum from './whitedimsum.jpg';
 
 export {
     homeIcon,
@@ -16,4 +19,7 @@ export {
     profileIcon,
     menuBurger,
     notificationIcon,
+    burgerWithLettuce,
+    anhnguyen,
+    whiteDimSum,
 };
