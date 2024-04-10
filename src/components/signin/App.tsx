@@ -115,7 +115,7 @@ export default function JoySignInSideTemplate() {
                                 <BadgeRoundedIcon />
                             </IconButton>
                             <Typography level="title-lg">
-                                KitchenConnect
+                                Kitchen Connect
                             </Typography>
                         </Box>
                         <ColorSchemeToggle />
@@ -149,7 +149,7 @@ export default function JoySignInSideTemplate() {
                                     Sign in
                                 </Typography>
                                 <Typography level="body-sm">
-                                    New to company?{' '}
+                                    New to Kitchen Connect?{' '}
                                     <Link
                                         href="#replace-with-a-link"
                                         level="title-sm"
@@ -230,7 +230,7 @@ export default function JoySignInSideTemplate() {
                     </Box>
                     <Box component="footer" sx={{ py: 3 }}>
                         <Typography level="body-xs" textAlign="center">
-                            © Your company {new Date().getFullYear()}
+                            © Kitchen Connect {new Date().getFullYear()}
                         </Typography>
                     </Box>
                 </Box>
