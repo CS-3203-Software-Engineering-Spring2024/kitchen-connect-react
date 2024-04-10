@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 1vw 1vw 1vw 1vw; /* Use vw for padding */
+    height: 100vh;
+    margin: 0;
+    max-height: calc(100vh - 6.25rem); /* Use rem for max-height */
+}
+
+.navbar-logo-container {
+    margin: 1.5rem 0 1.5rem 0; /* Use rem for margin */
+}
+
+.navbar-logo {
+    font-size: 0.9375rem; /* Use rem for font-size */
+}
+
+.navbar-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    cursor: pointer;
+
+    width: 100%;
+    padding: 0.8rem; /* Use rem for padding */
+    border-radius: 0.3125rem; /* Use rem for border-radius */
+    overflow-y: auto;
+    text-align: left;
+}
+
+.navbar-item-logo {
+    height: 2.4vw; /* Using vw for responsive height */
+    width: 2.4vw; /* Using vw for responsive width */
+    max-height: 24px; /* Fallback for smaller screens */
+    max-width: 24px; /* Fallback for smaller screens */
+    margin-right: 0.625rem; /* Use rem for margin */
+}
+
+.profile-icon {
+    border-radius: 50%; /* Apply circular border-radius */
+    height: 2.4vw; /* Using vw for responsive height */
+    width: 2.4vw; /* Using vw for responsive width */
+    max-height: 24px; /* Fallback for smaller screens */
+    max-width: 24px; /* Fallback for smaller screens */
+    object-fit: cover; /* Ensure the image covers the circular area */
+    margin-right: 0.625rem; /* Add margin for spacing between the icon and text */
+}
+
+.navbar-item:hover {
+    background-color: #87878731;
+}
+
+.navbar-bottom {
+    overflow-y: auto;
+    max-height: 6.25rem; /* Use rem for max-height */
+}
