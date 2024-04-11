@@ -9,6 +9,9 @@ import notificationIcon from './icons/notificationicon.png';
 import burgerWithLettuce from './burgerwithlettuce.jpg';
 import anhnguyen from './anhnguyen.jpg';
 import whiteDimSum from './whitedimsum.jpg';
+import likeIcon from './icons/likeicon.png';
+import commentIcon from './icons/commenticon.png';
+import repostIcon from './icons/reposticon.png';
 
 export {
     homeIcon,
@@ -22,4 +25,7 @@ export {
     burgerWithLettuce,
     anhnguyen,
     whiteDimSum,
+    commentIcon,
+    likeIcon,
+    repostIcon,
 };

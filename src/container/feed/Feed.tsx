@@ -1,6 +1,8 @@
 import React from 'react';
 import './feed.css';
 
+import { commentIcon, likeIcon, repostIcon } from '../../assets';
+
 const Feed = () => {
     return (
         <div className="feed">
@@ -24,11 +26,17 @@ const Feed = () => {
                     />
                     <div className="post-actions">
                         {/* Like button */}
-                        <button className="like-button">Like</button>
+                        <button className="post-actions-button like-button">
+                            <img src={likeIcon} alt="Like" />
+                        </button>
                         {/* Comment button */}
-                        <button className="comment-button">Comment</button>
+                        <button className="post-actions-button comment-button">
+                            <img src={commentIcon} alt="Comment" />
+                        </button>
                         {/* Repost button */}
-                        <button className="repost-button">Repost</button>
+                        <button className="post-actions-button repost-button">
+                            <img src={repostIcon} alt="Repost" />
+                        </button>
                     </div>
                     {/* Post caption */}
                     <p className="caption">This is a sample post caption.</p>
