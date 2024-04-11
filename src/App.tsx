@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // Change import statement
+import { useState } from 'react'; // Change import statement
 
 import { Navbar, JoySignInSideTemplate } from './components';
 import { Feed } from './container';
