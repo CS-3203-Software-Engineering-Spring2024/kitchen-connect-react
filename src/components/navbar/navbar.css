@@ -8,7 +8,6 @@
     padding: 1vw 1vw 1vw 1vw; /* Use vw for padding */
     height: 100vh;
     margin: 0;
-    max-height: calc(100vh - 6.25rem); /* Use rem for max-height */
 }
 
 .navbar-logo-container {
