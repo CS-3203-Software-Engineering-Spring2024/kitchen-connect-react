@@ -6,7 +6,11 @@ import App from './App';
 ReactDOM.createRoot(document.querySelector('#root')!).render(
     <React.StrictMode>
         <StyledEngineProvider injectFirst>
-            <App />
+            <App
+                onSignInSuccess={function (): void {
+                    throw new Error('Function not implemented.');
+                }}
+            />
         </StyledEngineProvider>
     </React.StrictMode>
 );
