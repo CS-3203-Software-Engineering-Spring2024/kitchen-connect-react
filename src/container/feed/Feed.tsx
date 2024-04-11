@@ -21,7 +21,7 @@ const Feed = () => {
                         src={gordonRamsey} // Replace with actual user photo URL or use a placeholder
                         alt="User"
                     />
-                    <span className="username">CookedMaster</span>
+                    <span className="username">gordonramsey</span>
                 </div>
                 {/* Post content */}
                 <div className="post-content">
@@ -44,8 +44,17 @@ const Feed = () => {
                             <img src={repostIcon} alt="Repost" />
                         </button>
                     </div>
-                    {/* Post caption */}
-                    <p className="caption">This is a sample post caption.</p>
+                    <div className="caption-container">
+                        {/* Post caption */}
+                        <p className="caption">
+                            <span className="username-caption">
+                                gordonramsey
+                            </span>{' '}
+                            Oh boy! Look at this beautiful dish! This is my
+                            first post on KitchenConnect, this app is going to
+                            be great!
+                        </p>
+                    </div>
                 </div>
             </div>
             {/* Add more posts here */}

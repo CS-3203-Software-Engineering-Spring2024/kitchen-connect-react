@@ -22,6 +22,11 @@
     font-weight: bold;
 }
 
+.username-caption {
+    font-weight: 600;
+    font-size: 14px;
+}
+
 .post-photo {
     height: 500px;
 }
@@ -38,4 +43,20 @@
 .post-actions-button img {
     height: 24px;
     width: 24px;
+}
+
+.caption-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.username-caption {
+    font-weight: 600;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.caption {
+    font-size: 14px;
+    font-weight: 400;
 }
