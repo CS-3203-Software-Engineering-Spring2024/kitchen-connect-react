@@ -52,7 +52,7 @@ const Feed = () => {
                             </span>{' '}
                             Oh boy! Look at this beautiful dish! This is my
                             first post on KitchenConnect, this app is going to
-                            be great!
+                            be great! #foodie #idiotsandwich
                         </p>
                     </div>
                 </div>
