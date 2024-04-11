@@ -14,9 +14,14 @@
 .app-layout {
     display: flex;
     flex-direction: row;
-    gap: 30px;
 }
 
 .app-layout-sign-in {
     background-color: rgb(255, 255, 255);
+}
+
+.app-layout-feed-container {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
