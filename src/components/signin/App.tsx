@@ -57,6 +57,29 @@ function ColorSchemeToggle(props: IconButtonProps) {
 }
 
 export default function JoySignInSideTemplate() {
+    const [error, setError] = React.useState<string>('');
+
+    const handleFormSubmit = (event: React.FormEvent<SignInFormElement>) => {
+        event.preventDefault();
+        const formElements = event.currentTarget.elements;
+        const email = formElements.email.value;
+        const password = formElements.password.value;
+
+        // Simulated user credentials
+        const mockUser = {
+            email: 'test@example.com',
+            password: 'password123',
+        };
+
+        if (email === mockUser.email && password === mockUser.password) {
+            // Simulate successful sign-in action (redirect, etc.)
+            alert('Sign-in successful!');
+            setError('');
+        } else {
+            setError('Invalid email or password');
+        }
+    };
+
     return (
         <CssVarsProvider defaultMode="dark" disableTransitionOnChange>
             <CssBaseline />
@@ -178,22 +201,7 @@ export default function JoySignInSideTemplate() {
                             or
                         </Divider>
                         <Stack gap={4} sx={{ mt: 2 }}>
-                            <form
-                                onSubmit={(
-                                    event: React.FormEvent<SignInFormElement>
-                                ) => {
-                                    event.preventDefault();
-                                    const formElements =
-                                        event.currentTarget.elements;
-                                    const data = {
-                                        email: formElements.email.value,
-                                        password: formElements.password.value,
-                                        persistent:
-                                            formElements.persistent.checked,
-                                    };
-                                    alert(JSON.stringify(data, null, 2));
-                                }}
-                            >
+                            <form onSubmit={handleFormSubmit}>
                                 <FormControl required>
                                     <FormLabel>Email</FormLabel>
                                     <Input type="email" name="email" />
@@ -202,6 +210,14 @@ export default function JoySignInSideTemplate() {
                                     <FormLabel>Password</FormLabel>
                                     <Input type="password" name="password" />
                                 </FormControl>
+                                {error && (
+                                    <Typography
+                                        fontSize="sm"
+                                        textColor="rgb(237, 73, 86)"
+                                    >
+                                        {error}
+                                    </Typography>
+                                )}
                                 <Stack gap={4} sx={{ mt: 2 }}>
                                     <Box
                                         sx={{
