@@ -1,10 +1,34 @@
-* {
-    background-color: black;
+.feed {
+    background-color: rgb(68, 68, 68);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.user-photo {
+    border-radius: 50%; /* Apply circular border-radius */
+    height: 2.4vw; /* Using vw for responsive height */
+    width: 2.4vw; /* Using vw for responsive width */
+    max-height: 24px; /* Fallback for smaller screens */
+    max-width: 24px; /* Fallback for smaller screens */
+    object-fit: cover; /* Ensure the image covers the circular area */
+    margin-right: 0.625rem; /* Add margin for spacing between the icon and text */
+}
+
+.post-photo {
+    height: 500px;
 }
 
 .post-actions {
     display: flex;
     flex-direction: row;
+}
+
+.post-actions-button {
+    background: none;
 }
 
 .post-actions-button img {

@@ -1,7 +1,13 @@
 import React from 'react';
 import './feed.css';
 
-import { commentIcon, likeIcon, repostIcon } from '../../assets';
+import {
+    profileIcon,
+    anhnguyen,
+    commentIcon,
+    likeIcon,
+    repostIcon,
+} from '../../assets';
 
 const Feed = () => {
     return (
@@ -12,16 +18,16 @@ const Feed = () => {
                 <div className="user-info">
                     <img
                         className="user-photo"
-                        src="placeholder.jpg" // Replace with actual user photo URL or use a placeholder
+                        src={profileIcon} // Replace with actual user photo URL or use a placeholder
                         alt="User"
                     />
-                    <span className="username">Username</span>
+                    <span className="username">CookedMaster</span>
                 </div>
                 {/* Post content */}
                 <div className="post-content">
                     <img
                         className="post-photo"
-                        src="placeholder.jpg" // Replace with actual post photo URL or use a placeholder
+                        src={anhnguyen} // Replace with actual post photo URL or use a placeholder
                         alt="Post"
                     />
                     <div className="post-actions">
