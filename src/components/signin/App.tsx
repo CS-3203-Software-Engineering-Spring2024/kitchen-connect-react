@@ -277,7 +277,7 @@ export default function JoySignInSideTemplate(
                     backgroundImage: `url(${whiteDimSum})`,
                     [theme.getColorSchemeSelector('dark')]: {
                         backgroundImage: `url(${burgerWithLettuce})`,
-                        filter: 'brightness(0.7)',
+                        filter: 'brightness(0.8)',
                     },
                 })}
             />
