@@ -16,6 +16,7 @@
 
 .navbar-logo {
     font-size: 0.9375rem; /* Use rem for font-size */
+    padding: 0.8rem;
 }
 
 .navbar-item {

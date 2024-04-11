@@ -25,6 +25,7 @@
 
 .username {
     font-weight: bold;
+    color: rgb(245, 245, 245);
 }
 
 .username-caption {
@@ -39,10 +40,14 @@
 .post-actions {
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 
 .post-actions-button {
+    cursor: pointer;
     background: none;
+    border: none;
+    padding: 5px;
 }
 
 .post-actions-button img {
@@ -50,18 +55,25 @@
     width: 24px;
 }
 
+.post-actions-button img:hover {
+    filter: brightness(0.7);
+}
+
 .caption-container {
     display: flex;
     flex-direction: row;
 }
 
-.username-caption {
+.caption-username {
     font-weight: 600;
     font-size: 14px;
     padding-right: 10px;
+    cursor: pointer;
+    color: rgb(245, 245, 245);
 }
 
 .caption {
     font-size: 14px;
     font-weight: 400;
+    color: rgb(245, 245, 245);
 }

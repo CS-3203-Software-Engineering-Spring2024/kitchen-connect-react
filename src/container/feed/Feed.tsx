@@ -47,7 +47,7 @@ const Feed = () => {
                     <div className="caption-container">
                         {/* Post caption */}
                         <p className="caption">
-                            <span className="username-caption">
+                            <span className="caption-username">
                                 gordonramsey
                             </span>{' '}
                             Oh boy! Look at this beautiful dish! This is my
