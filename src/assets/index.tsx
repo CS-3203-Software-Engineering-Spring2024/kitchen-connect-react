@@ -12,6 +12,7 @@ import whiteDimSum from './whitedimsum.jpg';
 import likeIcon from './icons/likeicon.png';
 import commentIcon from './icons/commenticon.png';
 import repostIcon from './icons/reposticon.png';
+import gordonRamsey from './gordonramsey.jpg';
 
 export {
     homeIcon,
@@ -28,4 +29,5 @@ export {
     commentIcon,
     likeIcon,
     repostIcon,
+    gordonRamsey,
 };

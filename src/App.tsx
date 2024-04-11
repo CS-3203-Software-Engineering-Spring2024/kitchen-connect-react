@@ -27,7 +27,9 @@ function App() {
                             activeTab={activeTab}
                             setActiveTab={setActiveTab}
                         />
-                        <Feed />
+                        <div className="app-layout-feed-container">
+                            <Feed />
+                        </div>
                     </>
                 )}
             </div>
