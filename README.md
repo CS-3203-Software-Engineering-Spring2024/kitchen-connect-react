@@ -1,3 +1,9 @@
+# Get Started
+1. Clone the repo
+2. cd kitchen-connect-react
+3. npm install
+4. npm run dev -- --open
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
