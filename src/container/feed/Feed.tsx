@@ -2,11 +2,11 @@ import React from 'react';
 import './feed.css';
 
 import {
-    profileIcon,
     anhnguyen,
     commentIcon,
     likeIcon,
     repostIcon,
+    gordonRamsey,
 } from '../../assets';
 
 const Feed = () => {
@@ -18,7 +18,7 @@ const Feed = () => {
                 <div className="user-info">
                     <img
                         className="user-photo"
-                        src={profileIcon} // Replace with actual user photo URL or use a placeholder
+                        src={gordonRamsey} // Replace with actual user photo URL or use a placeholder
                         alt="User"
                     />
                     <span className="username">CookedMaster</span>
