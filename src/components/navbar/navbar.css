@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #000000;
+    border-right: rgb(97, 96, 96) 1px solid;
+
     padding: 1vw 1vw 1vw 1vw; /* Use vw for padding */
     height: 100vh;
     margin: 0;
