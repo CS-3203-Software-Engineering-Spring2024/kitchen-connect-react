@@ -10,12 +10,16 @@
 
 .user-photo {
     border-radius: 50%; /* Apply circular border-radius */
-    height: 2.4vw; /* Using vw for responsive height */
-    width: 2.4vw; /* Using vw for responsive width */
-    max-height: 24px; /* Fallback for smaller screens */
-    max-width: 24px; /* Fallback for smaller screens */
+    height: 5vw; /* Using vw for responsive height */
+    width: 5vw; /* Using vw for responsive width */
+    max-height: 30px; /* Fallback for smaller screens */
+    max-width: 30px; /* Fallback for smaller screens */
     object-fit: cover; /* Ensure the image covers the circular area */
     margin-right: 0.625rem; /* Add margin for spacing between the icon and text */
+}
+
+.username {
+    font-weight: bold;
 }
 
 .post-photo {
