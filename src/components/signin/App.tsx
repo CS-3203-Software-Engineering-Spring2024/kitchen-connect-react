@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import CssBaseline from '@mui/joy/CssBaseline';
@@ -26,6 +26,10 @@ interface FormElements extends HTMLFormControlsCollection {
 }
 interface SignInFormElement extends HTMLFormElement {
     readonly elements: FormElements;
+}
+
+interface JoySignInSideTemplateProps {
+    onSignInSuccess: () => void;
 }
 
 function ColorSchemeToggle(props: IconButtonProps) {
@@ -56,7 +60,9 @@ function ColorSchemeToggle(props: IconButtonProps) {
     );
 }
 
-export default function JoySignInSideTemplate() {
+export default function JoySignInSideTemplate(
+    props: JoySignInSideTemplateProps
+) {
     const [error, setError] = React.useState<string>('');
 
     const handleFormSubmit = (event: React.FormEvent<SignInFormElement>) => {
@@ -73,8 +79,9 @@ export default function JoySignInSideTemplate() {
 
         if (email === mockUser.email && password === mockUser.password) {
             // Simulate successful sign-in action (redirect, etc.)
-            alert('Sign-in successful!');
+            console.log('Sign in successful');
             setError('');
+            props.onSignInSuccess();
         } else {
             setError('Invalid email or password');
         }
