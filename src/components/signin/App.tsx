@@ -146,7 +146,7 @@ export default function JoySignInSideTemplate(
                                 <BadgeRoundedIcon />
                             </IconButton>
                             <Typography level="title-lg">
-                                Kitchen Connect
+                                KitchenConnect
                             </Typography>
                         </Box>
                         <ColorSchemeToggle />
