@@ -8,6 +8,7 @@ import {
     postIcon,
     profileIcon,
     searchIcon,
+    bookmarkIcon,
 } from '../../assets/index';
 import './navbar.css'; // Add your CSS file for styling
 
@@ -79,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                     className={`navbar-item ${
                         activeTab === 'Messages' ? 'active' : ''
                     }`}
-                    onClick={() => setActiveTab('Messages')}
+                    onClick={() => setActiveTab('Notifications')}
                 >
                     <img
                         className="navbar-item-logo"
@@ -92,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                     className={`navbar-item ${
                         activeTab === 'Notifications' ? 'active' : ''
                     }`}
-                    onClick={() => setActiveTab('Notifications')}
+                    onClick={() => setActiveTab('Messages')}
                 >
                     <img
                         className="navbar-item-logo"
@@ -100,6 +101,19 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                         alt="Home"
                     />
                     Messages
+                </div>
+                <div
+                    className={`navbar-item ${
+                        activeTab === 'Notifications' ? 'active' : ''
+                    }`}
+                    onClick={() => setActiveTab('Recipes')}
+                >
+                    <img
+                        className="navbar-item-logo"
+                        src={bookmarkIcon}
+                        alt="Home"
+                    />
+                    Recipes
                 </div>
                 <div
                     className={`navbar-item ${

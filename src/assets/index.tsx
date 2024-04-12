@@ -13,6 +13,7 @@ import likeIcon from './icons/likeicon.png';
 import commentIcon from './icons/commenticon.png';
 import repostIcon from './icons/reposticon.png';
 import gordonRamsey from './gordonramsey.jpg';
+import bookmarkIcon from './icons/bookmarkicon.png';
 
 export {
     homeIcon,
@@ -30,4 +31,5 @@ export {
     likeIcon,
     repostIcon,
     gordonRamsey,
+    bookmarkIcon,
 };

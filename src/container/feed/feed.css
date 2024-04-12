@@ -2,20 +2,32 @@
     background-color: rgb(0, 0, 0);
 }
 
+.post {
+    width: 500px;
+}
+
 .user-info {
     display: flex;
     flex-direction: row;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 0 0;
+    padding: 10px 0 10px 0;
 }
 
 .user-photo {
     border-radius: 50%; /* Apply circular border-radius */
-    height: 2.4vw; /* Using vw for responsive height */
-    width: 2.4vw; /* Using vw for responsive width */
-    max-height: 24px; /* Fallback for smaller screens */
-    max-width: 24px; /* Fallback for smaller screens */
+    height: 5vw; /* Using vw for responsive height */
+    width: 5vw; /* Using vw for responsive width */
+    max-height: 30px; /* Fallback for smaller screens */
+    max-width: 30px; /* Fallback for smaller screens */
     object-fit: cover; /* Ensure the image covers the circular area */
     margin-right: 0.625rem; /* Add margin for spacing between the icon and text */
+    cursor: pointer;
+}
+
+.username {
+    font-weight: 600;
+    color: rgb(245, 245, 245);
+    cursor: pointer;
 }
 
 .post-photo {
@@ -25,13 +37,45 @@
 .post-actions {
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 
 .post-actions-button {
+    cursor: pointer;
     background: none;
+    border: none;
+    padding: 5px;
 }
 
 .post-actions-button img {
     height: 24px;
     width: 24px;
+}
+
+.post-actions-button img:hover {
+    filter: brightness(0.7);
+}
+
+.post-actions-button:focus,
+.post-actions-button:focus-visible {
+    outline: none;
+}
+
+.caption-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.caption-username {
+    font-weight: 600;
+    font-size: 14px;
+    padding-right: 6px;
+    cursor: pointer;
+    color: rgb(245, 245, 245);
+}
+
+.caption {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(245, 245, 245);
 }
