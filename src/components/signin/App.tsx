@@ -274,9 +274,9 @@ export default function JoySignInSideTemplate(
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
-                    backgroundImage: `url(${whiteDimSum})`,
+                    backgroundImage: `url(${whiteDimSum})`, // Photo by charlesdeluvio on Unsplash
                     [theme.getColorSchemeSelector('dark')]: {
-                        backgroundImage: `url(${burgerWithLettuce})`,
+                        backgroundImage: `url(${burgerWithLettuce})`, // Photo by Eiliv Aceron on Unsplash
                         filter: 'brightness(0.8)',
                     },
                 })}

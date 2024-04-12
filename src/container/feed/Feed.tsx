@@ -29,7 +29,7 @@ const Feed = () => {
                     <img
                         className="post-photo"
                         src={anhnguyen} // Replace with actual post photo URL or use a placeholder
-                        alt="Post"
+                        alt="Photo by Anh Nguyen on Unsplash"
                     />
                     <div className="post-actions">
                         {/* Like button */}
