@@ -21,16 +21,13 @@
     max-width: 30px; /* Fallback for smaller screens */
     object-fit: cover; /* Ensure the image covers the circular area */
     margin-right: 0.625rem; /* Add margin for spacing between the icon and text */
+    cursor: pointer;
 }
 
 .username {
-    font-weight: bold;
-    color: rgb(245, 245, 245);
-}
-
-.username-caption {
     font-weight: 600;
-    font-size: 14px;
+    color: rgb(245, 245, 245);
+    cursor: pointer;
 }
 
 .post-photo {
@@ -59,6 +56,11 @@
     filter: brightness(0.7);
 }
 
+.post-actions-button:focus,
+.post-actions-button:focus-visible {
+    outline: none;
+}
+
 .caption-container {
     display: flex;
     flex-direction: row;
@@ -67,7 +69,7 @@
 .caption-username {
     font-weight: 600;
     font-size: 14px;
-    padding-right: 10px;
+    padding-right: 6px;
     cursor: pointer;
     color: rgb(245, 245, 245);
 }

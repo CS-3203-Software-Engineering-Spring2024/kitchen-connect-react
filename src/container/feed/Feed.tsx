@@ -6,6 +6,7 @@ import {
     commentIcon,
     likeIcon,
     repostIcon,
+    bookmarkIcon,
     gordonRamsey,
 } from '../../assets';
 
@@ -42,6 +43,9 @@ const Feed = () => {
                         {/* Repost button */}
                         <button className="post-actions-button repost-button">
                             <img src={repostIcon} alt="Repost" />
+                        </button>
+                        <button className="post-actions-button save-button">
+                            <img src={bookmarkIcon} alt="Save" />
                         </button>
                     </div>
                     <div className="caption-container">
