@@ -1,3 +1,6 @@
+/*
+    This is to easily import assets to other files, you will see these types of index.ts files 
+*/
 import homeIcon from './icons/homeicon.png';
 import exploreIcon from './icons/exploreicon.png';
 import searchIcon from './icons/searchicon.png';

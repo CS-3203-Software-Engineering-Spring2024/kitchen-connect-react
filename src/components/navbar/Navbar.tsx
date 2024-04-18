@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Below we are importing icons from assets/index.tsx
 import {
     homeIcon,
     exploreIcon,
@@ -10,13 +12,12 @@ import {
     searchIcon,
     bookmarkIcon,
 } from '../../assets/index';
-import './navbar.css'; // Add your CSS file for styling
+import './navbar.css';
 
 interface NavbarProps {
     activeTab: string;
     setActiveTab: (tab: string) => void;
 }
-
 const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
     return (
         <div className="navbar">
