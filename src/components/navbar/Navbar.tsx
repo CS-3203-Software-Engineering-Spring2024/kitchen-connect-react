@@ -18,6 +18,7 @@ interface NavbarProps {
     activeTab: string;
     setActiveTab: (tab: string) => void;
 }
+// TODO: Fix navbar to show selected tab on screen when clicked
 const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
     return (
         <div className="navbar">

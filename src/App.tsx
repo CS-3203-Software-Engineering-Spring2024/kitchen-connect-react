@@ -4,7 +4,7 @@ This is the main component of the application. It is responsible for rendering m
 
 import { useState } from 'react'; // Importing useState hook from React
 import { Navbar, JoySignInSideTemplate } from './components'; // Importing components
-import { Feed } from './container'; // Importing container
+import { Feed } from './pages'; // Importing container
 import './App.css'; // Importing CSS
 
 function App() {

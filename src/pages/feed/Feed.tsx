@@ -10,6 +10,7 @@ import {
     gordonRamsey,
 } from '../../assets';
 
+// TODO: Change photos to not use Gordan Ramsey as example
 const Feed = () => {
     return (
         <div className="feed">
