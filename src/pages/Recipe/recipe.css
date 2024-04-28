@@ -1,0 +1,26 @@
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(12.5em, auto);
+    padding: 1.25em;
+    gap: 1.25em;
+}
+
+.recipe-card {
+    border: 1px solid rgb(97, 96, 96);
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.recipe-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-name {
+    padding: 0.625em;
+    text-align: center;
+    font-size: 1.125em;
+    font-weight: 400;
+}
