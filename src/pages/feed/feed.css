@@ -1,96 +1,95 @@
 .feed-container {
-    max-height: 800px; /* Set your desired maximum height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    /* Hide scrollbar for Firefox */
-    scrollbar-width: none;
-    /* Hide scrollbar for Webkit (Chrome, Safari) */
-    -ms-overflow-style: none; /* For IE and Edge */
+  max-height: 100vh; /* Set your desired maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for Webkit (Chrome, Safari) */
+  -ms-overflow-style: none; /* For IE and Edge */
 }
 
 .feed-container::-webkit-scrollbar {
-    width: 0; /* Remove scrollbar width */
-    height: 0; /* Remove scrollbar height */
+  width: 0; /* Remove scrollbar width */
+  height: 0; /* Remove scrollbar height */
 }
 .feed {
-    background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
 }
 
 .post {
-    width: 500px;
-    margin-bottom: 20px; /* Add margin between posts */
+  width: 500px;
+  margin-bottom: 20px; /* Add margin between posts */
 }
 
-
 .user-info {
-    display: flex;
-    flex-direction: row;
-    margin: 10px 0 0 0;
-    padding: 10px 0 10px 0;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 0 0;
+  padding: 10px 0 10px 0;
 }
 
 .user-photo {
-    border-radius: 50%; /* Apply circular border-radius */
-    height: 5vw; /* Using vw for responsive height */
-    width: 5vw; /* Using vw for responsive width */
-    max-height: 30px; /* Fallback for smaller screens */
-    max-width: 30px; /* Fallback for smaller screens */
-    object-fit: cover; /* Ensure the image covers the circular area */
-    margin-right: 0.625rem; /* Add margin for spacing between the icon and text */
-    cursor: pointer;
+  border-radius: 50%; /* Apply circular border-radius */
+  height: 5vw; /* Using vw for responsive height */
+  width: 5vw; /* Using vw for responsive width */
+  max-height: 30px; /* Fallback for smaller screens */
+  max-width: 30px; /* Fallback for smaller screens */
+  object-fit: cover; /* Ensure the image covers the circular area */
+  margin-right: 0.625rem; /* Add margin for spacing between the icon and text */
+  cursor: pointer;
 }
 
 .username {
-    font-weight: 600;
-    color: rgb(245, 245, 245);
-    cursor: pointer;
+  font-weight: 600;
+  color: rgb(245, 245, 245);
+  cursor: pointer;
 }
 
 .post-photo {
-    height: 500px;
+  height: 500px;
 }
 
 .post-actions {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .post-actions-button {
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
 }
 
 .post-actions-button img {
-    height: 24px;
-    width: 24px;
+  height: 24px;
+  width: 24px;
 }
 
 .post-actions-button img:hover {
-    filter: brightness(0.7);
+  filter: brightness(0.7);
 }
 
 .post-actions-button:focus,
 .post-actions-button:focus-visible {
-    outline: none;
+  outline: none;
 }
 
 .caption-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .caption-username {
-    font-weight: 600;
-    font-size: 14px;
-    padding-right: 6px;
-    cursor: pointer;
-    color: rgb(245, 245, 245);
+  font-weight: 600;
+  font-size: 14px;
+  padding-right: 6px;
+  cursor: pointer;
+  color: rgb(245, 245, 245);
 }
 
 .caption {
-    font-size: 14px;
-    font-weight: 400;
-    color: rgb(245, 245, 245);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(245, 245, 245);
 }
