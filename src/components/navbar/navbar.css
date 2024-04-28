@@ -58,6 +58,7 @@
 }
 
 .navbar-bottom {
-    overflow-y: auto;
+    overflow-y: hidden; /* Disable scrolling */
     max-height: 6.25rem; /* Use rem for max-height */
 }
+
