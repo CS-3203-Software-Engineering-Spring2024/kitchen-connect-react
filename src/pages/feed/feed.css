@@ -1,10 +1,25 @@
+.feed-container {
+    max-height: 800px; /* Set your desired maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    /* Hide scrollbar for Webkit (Chrome, Safari) */
+    -ms-overflow-style: none; /* For IE and Edge */
+}
+
+.feed-container::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar width */
+    height: 0; /* Remove scrollbar height */
+}
 .feed {
     background-color: rgb(0, 0, 0);
 }
 
 .post {
     width: 500px;
+    margin-bottom: 20px; /* Add margin between posts */
 }
+
 
 .user-info {
     display: flex;
