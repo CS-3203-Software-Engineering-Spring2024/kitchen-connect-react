@@ -8,16 +8,15 @@ interface Recipe {
 }
 
 const recipes: Recipe[] = [
-    // Add your recipes here
-    { name: 'Tofu Bowl', image: anhnguyen },
-    { name: 'Cheeseburger', image: burgerWithLettuce },
-    { name: 'Dumpling', image: whiteDimSum },
+    // Add your recipes collection here
+    { name: 'Vegetarian', image: anhnguyen },
+    { name: 'Burgers', image: burgerWithLettuce },
+    { name: 'Dim Sum', image: whiteDimSum },
 ];
 
 const Recipe: React.FC = () => {
     return (
-        <div>
-            <h1>Saved Recipes</h1>
+        <div className="recipe-page-container">
             <div className="recipe-grid">
                 {recipes.map((recipe, index) => (
                     <div key={index} className="recipe-card">

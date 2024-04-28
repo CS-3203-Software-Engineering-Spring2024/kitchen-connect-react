@@ -1,3 +1,16 @@
+.recipe-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25em;
+}
+
+.recipe-page-container-title {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin: 1.25em;
+}
+
 .recipe-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -19,7 +32,7 @@
 }
 
 .recipe-name {
-    padding: 0.625em;
+    padding: 0.425em;
     text-align: center;
     font-size: 1.125em;
     font-weight: 400;
