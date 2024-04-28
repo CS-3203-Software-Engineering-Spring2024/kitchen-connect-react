@@ -65,6 +65,10 @@
     background-color: #87878731;
 }
 
+.navbar-item.active {
+    border: 1px solid white;
+}
+
 .navbar-bottom {
     overflow-y: hidden; /* Disable scrolling */
     max-height: 6.25rem; /* Use rem for max-height */
