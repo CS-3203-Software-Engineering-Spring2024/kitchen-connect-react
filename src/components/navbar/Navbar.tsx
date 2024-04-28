@@ -1,6 +1,6 @@
 import React from 'react';
+import './navbar.css';
 
-// Below we are importing icons from assets/index.tsx
 import {
     homeIcon,
     exploreIcon,
@@ -11,125 +11,58 @@ import {
     profileIcon,
     searchIcon,
     bookmarkIcon,
+    signouticon
 } from '../../assets/index';
-import './navbar.css';
+
+interface NavbarItem {
+    name: string;
+    icon: string;
+}
 
 interface NavbarProps {
     activeTab: string;
     setActiveTab: (tab: string) => void;
 }
-// TODO: Fix navbar to show selected tab on screen when clicked
-const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
+
+const navbarItems: NavbarItem[] = [
+    { name: 'Home', icon: homeIcon },
+    { name: 'Explore', icon: exploreIcon },
+    { name: 'Search', icon: searchIcon },
+    { name: 'Post', icon: postIcon },
+    { name: 'Notifications', icon: notificationIcon },
+    { name: 'Messages', icon: messagesIcon },
+    { name: 'Recipes', icon: bookmarkIcon },
+    { name: 'Profile', icon: profileIcon },
+    { name: 'Sign Out', icon: signouticon},
+];
+
+const Navbar: React.FC <NavbarProps> = ({ activeTab, setActiveTab }) => {
+    const handleTabClick = (tab: string) => {
+        setActiveTab(tab);
+    };
+
     return (
         <div className="navbar">
             <div className="navbar-items">
                 <div className="navbar-logo-container">
                     <h1 className="navbar-logo">KitchenConnect</h1>
                 </div>
-                <div
-                    className={`navbar-item ${
-                        activeTab === 'Home' ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveTab('Home')}
-                >
-                    <img
-                        className="navbar-item-logo"
-                        src={homeIcon}
-                        alt="Home"
-                    />
-                    Home
-                </div>
-                <div
-                    className={`navbar-item ${
-                        activeTab === 'Explore' ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveTab('Explore')}
-                >
-                    <img
-                        className="navbar-item-logo"
-                        src={exploreIcon}
-                        alt="Home"
-                    />
-                    Explore
-                </div>
-                <div
-                    className={`navbar-item ${
-                        activeTab === 'Search' ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveTab('Search')}
-                >
-                    <img
-                        className="navbar-item-logo"
-                        src={searchIcon}
-                        alt="Home"
-                    />
-                    Search
-                </div>
-                <div
-                    className={`navbar-item ${
-                        activeTab === 'Post' ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveTab('Post')}
-                >
-                    <img
-                        className="navbar-item-logo"
-                        src={postIcon}
-                        alt="Home"
-                    />
-                    Post
-                </div>
-                <div
-                    className={`navbar-item ${
-                        activeTab === 'Messages' ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveTab('Notifications')}
-                >
-                    <img
-                        className="navbar-item-logo"
-                        src={notificationIcon}
-                        alt="Home"
-                    />
-                    Notifications
-                </div>
-                <div
-                    className={`navbar-item ${
-                        activeTab === 'Notifications' ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveTab('Messages')}
-                >
-                    <img
-                        className="navbar-item-logo"
-                        src={messagesIcon}
-                        alt="Home"
-                    />
-                    Messages
-                </div>
-                <div
-                    className={`navbar-item ${
-                        activeTab === 'Notifications' ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveTab('Recipes')}
-                >
-                    <img
-                        className="navbar-item-logo"
-                        src={bookmarkIcon}
-                        alt="Home"
-                    />
-                    Recipes
-                </div>
-                <div
-                    className={`navbar-item ${
-                        activeTab === 'Profile' ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveTab('Profile')}
-                >
-                    <img
-                        className="navbar-item-logo profile-icon"
-                        src={profileIcon}
-                        alt="Home"
-                    />
-                    Profile
-                </div>
+                {navbarItems.map((item, index) => (
+                    <div
+                        key={index}
+                        className={`navbar-item ${
+                            activeTab === item.name ? 'active' : ''
+                        }`}
+                        onClick={() => handleTabClick(item.name)}
+                    >
+                        <img
+                            className="navbar-item-logo"
+                            src={item.icon}
+                            alt={item.name}
+                        />
+                        {item.name}
+                    </div>
+                ))}
             </div>
 
             <div className="navbar-bottom">
@@ -137,12 +70,12 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                     className={`navbar-item ${
                         activeTab === 'Settings' ? 'active' : ''
                     } settings`}
-                    onClick={() => setActiveTab('Settings')}
+                    onClick={() => handleTabClick('Settings')}
                 >
                     <img
                         className="navbar-item-logo"
                         src={menuBurger}
-                        alt="Home"
+                        alt="Settings"
                     />
                     Settings
                 </div>
@@ -151,4 +84,4 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
     );
 };
 
-export default Navbar;
+export default Navbar; 
