@@ -1,11 +1,8 @@
-/*
-This is the main component of the application. It is responsible for rendering most components of the application
-*/
-
-import { useState } from 'react'; // Importing useState hook from React
-import { Navbar, JoySignInSideTemplate } from './components'; // Importing components
-import { Feed } from './pages'; // Importing container
-import './App.css'; // Importing CSS
+import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import BrowserRouter, Route, and Routes
+import { Navbar, JoySignInSideTemplate } from './components';
+import { Feed, Recipe } from './pages';
+import './App.css';
 
 function App() {
     const [activeTab, setActiveTab] = useState('Home');
@@ -20,22 +17,30 @@ function App() {
             <div className="app-layout">
                 {!authenticated ? (
                     <div className="app-layout-sign-in">
-                        {/* Sign in component */}
                         <JoySignInSideTemplate
                             onSignInSuccess={handleSignInSuccess}
                         />
                     </div>
                 ) : (
-                    <>
-                        {/* Navbar component */}
+                    <Router>
                         <Navbar
                             activeTab={activeTab}
                             setActiveTab={setActiveTab}
                         />
                         <div className="app-layout-feed-container">
-                            <Feed /> {/* Feed component */}
+                            <Routes>
+                                {' '}
+                                {/* Use the Routes component here */}
+                                <Route
+                                    path="/recipes"
+                                    element={<Recipe />}
+                                />{' '}
+                                {/* Define a route for the Recipe page */}
+                                <Route path="/" element={<Feed />} />{' '}
+                                {/* Define a route for the Feed component */}
+                            </Routes>
                         </div>
-                    </>
+                    </Router>
                 )}
             </div>
         </div>
