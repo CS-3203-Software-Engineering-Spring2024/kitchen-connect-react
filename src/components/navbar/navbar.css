@@ -11,6 +11,14 @@
     margin: 0;
 }
 
+.navbar a {
+    color: white; /* Set the color of links to white */
+}
+
+.navbar a:hover {
+    color: white; /* Set the color of links to white */
+}
+
 .navbar-logo-container {
     margin: 1.5rem 0 1.5rem 0; /* Use rem for margin */
 }
@@ -61,4 +69,3 @@
     overflow-y: hidden; /* Disable scrolling */
     max-height: 6.25rem; /* Use rem for max-height */
 }
-
