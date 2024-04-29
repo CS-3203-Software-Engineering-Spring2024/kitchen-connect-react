@@ -44,7 +44,7 @@ KitchenConnect caters to a diverse audience, including:
 
 - **HTML**
 - **CSS**
-- **JavaScript:** Powered by ReactJS for dynamic and responsive user interfaces.
+- **Typescript:** Powered by ReactJS for dynamic and responsive user interfaces.
 
 ### Backend:
 
