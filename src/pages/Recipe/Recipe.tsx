@@ -3,23 +3,28 @@ import { anhnguyen, burgerWithLettuce, whiteDimSum } from '../../assets';
 import { addicon } from '../../assets/index';
 import './recipe.css';
 
+interface Collection {
+    name: string;
+    image: string;
+}
+
 interface Recipe {
     name: string;
     image: string;
 }
 
-const groupedRecipes: Recipe[] = [
+const groupedRecipes: Collection[] = [
     { name: 'Vegetarian', image: anhnguyen },
     { name: 'Burgers', image: burgerWithLettuce },
     { name: 'Dim Sum', image: whiteDimSum },
 ];
 
 const ungroupedRecipes: Recipe[] = [
-    { name: 'Vegetarian', image: anhnguyen },
-    { name: 'Vegetarian', image: anhnguyen },
-    { name: 'Vegetarian', image: anhnguyen },
-    { name: 'Burgers', image: burgerWithLettuce },
-    { name: 'Dim Sum', image: whiteDimSum },
+    { name: 'Tofu bowl', image: anhnguyen },
+    { name: 'Tofu bowl', image: anhnguyen },
+    { name: 'Tofu bowl', image: anhnguyen },
+    { name: 'Cheeseburger', image: burgerWithLettuce },
+    { name: 'Simple white dumplings', image: whiteDimSum },
 ];
 
 const Recipe: React.FC = () => {
@@ -32,15 +37,17 @@ const Recipe: React.FC = () => {
                 </button>
             </div>
             <div className="recipe-grid">
-                {groupedRecipes.map((recipe, index) => (
+                {groupedRecipes.map((collection, index) => (
                     <div key={index} className="recipe-card">
                         <div className="recipe-card-inner">
                             <img
-                                src={recipe.image}
-                                alt={recipe.name}
+                                src={collection.image}
+                                alt={collection.name}
                                 className="recipe-image"
                             />
-                            <p className="recipe-name">{recipe.name}</p>
+                            <p className="recipe-name collection-name">
+                                {collection.name}
+                            </p>
                         </div>
                     </div>
                 ))}
