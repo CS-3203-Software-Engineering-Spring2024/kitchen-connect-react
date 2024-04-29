@@ -17,7 +17,8 @@ import commentIcon from './icons/commenticon.png';
 import repostIcon from './icons/reposticon.png';
 import gordonRamsey from './gordonramsey.jpg';
 import bookmarkIcon from './icons/bookmarkicon.png';
-import signouticon from './icons/signouticon.png'
+import signouticon from './icons/signouticon.png';
+import addicon from './icons/addicon.svg';
 
 export {
     homeIcon,
@@ -36,5 +37,6 @@ export {
     repostIcon,
     gordonRamsey,
     bookmarkIcon,
-    signouticon
+    signouticon,
+    addicon,
 };

@@ -4,6 +4,30 @@
     align-items: center;
     padding: 1.25em;
 }
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.collection-add-button {
+    background: none;
+    border: none;
+}
+
+.collection-add-button:hover {
+    border: none;
+}
+
+.collection-add-button img {
+    height: 2.4vw;
+    width: 2.4vw;
+    max-height: 24px;
+    max-width: 24px;
+}
+
 .recipe-page-container-title {
     font-size: 1.5em;
     font-weight: 400;
@@ -51,15 +75,17 @@
 .recipe-name {
     padding: 0.425em;
     text-align: center;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 400;
-}
 
-.recipe-name {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.5s ease;
+}
+
+.collection-name {
+    font-size: 2em;
 }
