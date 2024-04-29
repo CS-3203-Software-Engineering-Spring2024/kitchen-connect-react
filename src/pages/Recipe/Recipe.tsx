@@ -1,5 +1,6 @@
 import React from 'react';
 import { anhnguyen, burgerWithLettuce, whiteDimSum } from '../../assets';
+import { addicon } from '../../assets/index';
 import './recipe.css';
 
 interface Recipe {
@@ -24,7 +25,12 @@ const ungroupedRecipes: Recipe[] = [
 const Recipe: React.FC = () => {
     return (
         <div className="recipe-page-container">
-            <h2 className="recipe-page-container-title">Collections</h2>
+            <div className="title-container">
+                <h2 className="recipe-page-container-title">Collections</h2>
+                <button className="collection-add-button">
+                    <img src={addicon} alt="Add sign" />
+                </button>
+            </div>
             <div className="recipe-grid">
                 {groupedRecipes.map((recipe, index) => (
                     <div key={index} className="recipe-card">

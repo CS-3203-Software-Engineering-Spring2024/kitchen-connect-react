@@ -4,6 +4,30 @@
     align-items: center;
     padding: 1.25em;
 }
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.collection-add-button {
+    background: none;
+    border: none;
+}
+
+.collection-add-button:hover {
+    border: none;
+}
+
+.collection-add-button img {
+    height: 2.4vw;
+    width: 2.4vw;
+    max-height: 24px;
+    max-width: 24px;
+}
+
 .recipe-page-container-title {
     font-size: 1.5em;
     font-weight: 400;
