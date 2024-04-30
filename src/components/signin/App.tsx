@@ -115,27 +115,39 @@ const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setNewSessionParams({
             email: {email},
             password: {password}
-          });
-
-    axios.post('https://kitchen-connect-37ead1a6bb0d.herokuapp.com/sessions', newSessionParams)
-      .then(response => {
-        axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.jwt}`;
-        localStorage.setItem('jwt', response.data.jwt);
-        localStorage.setItem('user_id', response.data.user_id);
-        // Assuming you're using something like react-toastify for flash messages
-        alert('Successfully logged in!'); // Placeholder for flash message
-        // Redirect using React Router
-        // window.history.pushState({}, '', '/'); // Basic way to navigate
-        props.onSignInSuccess();
-    })
-      .catch(error => {
-        console.error(error.response);
-        setErrors(['Invalid email or password.']);
-        setNewSessionParams({
-          email: '',
-          password: ''
         });
-      });
+
+        /*
+        axios.post('https://kitchen-connect-37ead1a6bb0d.herokuapp.com/sessions', newSessionParams)
+        .then(response => {
+            axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.jwt}`;
+            localStorage.setItem('jwt', response.data.jwt);
+            localStorage.setItem('user_id', response.data.user_id);
+            // Assuming you're using something like react-toastify for flash messages
+            alert('Successfully logged in!'); // Placeholder for flash message
+            // Redirect using React Router
+            // window.history.pushState({}, '', '/'); // Basic way to navigate
+            props.onSignInSuccess();
+        })
+        .catch(error => {
+            console.error(error.response);
+            setErrors(['Invalid email or password.']);
+            setNewSessionParams({
+            email: '',
+            password: ''
+            });
+        });
+
+        };
+        */
+
+        localStorage.setItem('jwt', '1');
+        localStorage.setItem('user_id', '1');
+
+        alert('Successfully logged in!');
+
+        props.onSignInSuccess();
+        //window.history.pushState({}, '', '/');
 
     };
 
