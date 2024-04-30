@@ -30,17 +30,20 @@ interface NavbarProps {
 
 const navbarItems: NavbarItem[] = [
     { name: 'Home', icon: homeIcon, path: '/' },
-    { name: 'Explore', icon: exploreIcon, path: '/explore' },
-    { name: 'Search', icon: searchIcon, path: '/search' },
+    // { name: 'Explore', icon: exploreIcon, path: '/explore' },
+    // { name: 'Search', icon: searchIcon, path: '/search' },
     { name: 'Post', icon: postIcon, path: '/post' },
-    { name: 'Notifications', icon: notificationIcon, path: '/notifications' },
-    { name: 'Messages', icon: messagesIcon, path: '/messages' },
+    // { name: 'Notifications', icon: notificationIcon, path: '/notifications' },
+    // { name: 'Messages', icon: messagesIcon, path: '/messages' },
     { name: 'Recipes', icon: bookmarkIcon, path: '/recipes' },
     { name: 'Profile', icon: profileIcon, path: '/profile' },
 ];
 
-const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, signOut }) => {
-
+const Navbar: React.FC<NavbarProps> = ({
+    activeTab,
+    setActiveTab,
+    signOut,
+}) => {
     const navigate = useNavigate();
 
     const handleTabClick = (tab: string) => {
@@ -51,8 +54,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, signOut }) => 
         // Implement your sign-out logic here
         console.log('Signing out...'); // Placeholder for actual sign-out logic
         // Redirect to login or other appropriate action
-        localStorage.removeItem('jwt')
-        localStorage.removeItem('user_id')
+        localStorage.removeItem('jwt');
+        localStorage.removeItem('user_id');
 
         signOut(false);
 
