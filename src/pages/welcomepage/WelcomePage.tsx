@@ -1,10 +1,10 @@
-import './welcomepage.css';
 import Home from './Home';
 import About from './About';
 import Work from './Work';
 import Testimonial from './Testimonials';
 import Contact from './Contact';
 import Footer from './Footer';
+import './welcomepage.css';
 
 function WelcomePage() {
     return (

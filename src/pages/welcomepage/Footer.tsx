@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="footer-wrapper">
             <div className="footer-section-one">
                 <div className="footer-logo-container">
-                    {/* <p1 style={{ color: '#fe9e0d', fontSize: '16px' }}>
+                    <p style={{ color: '#fe9e0d', fontSize: '16px' }}>
                         KitchenConnect
-                    </p1> */}
+                    </p>
                     <h1>KitchenConnect</h1>
                 </div>
                 <div className="footer-icons">

@@ -14,10 +14,8 @@ function App() {
 
     return (
         <div className="app">
-            <div className="app-welcome">
-                <WelcomePage />
-            </div>
-            <div className="app-layout">
+            <WelcomePage />
+            {/* <div className="app-layout">
                 {!authenticated ? (
                     <div className="app-layout-sign-in">
                         <JoySignInSideTemplate
@@ -32,20 +30,13 @@ function App() {
                         />
                         <div className="app-layout-feed-container">
                             <Routes>
-                                {' '}
-                                {/* Use the Routes component here */}
-                                <Route
-                                    path="/recipes"
-                                    element={<Recipe />}
-                                />{' '}
-                                {/* Define a route for the Recipe page */}
-                                <Route path="/" element={<Feed />} />{' '}
-                                {/* Define a route for the Feed component */}
+                                <Route path="/recipes" element={<Recipe />} />
+                                <Route path="/" element={<Feed />} />
                             </Routes>
                         </div>
                     </Router>
                 )}
-            </div>
+            </div> */}
         </div>
     );
 }
