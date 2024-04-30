@@ -12,9 +12,10 @@ type RecipeType = {
 };
 
 function App() {
-
     const [activeTab, setActiveTab] = useState('Home');
-    const [authenticated, setAuthenticated] = useState(localStorage.getItem('jwt') !== null);
+    const [authenticated, setAuthenticated] = useState(
+        localStorage.getItem('jwt') !== null
+    );
     const [recipes, setRecipes] = useState<RecipeType[]>([]);
 
     const handleSignInSuccess = () => {
@@ -54,7 +55,42 @@ function App() {
                             <Route path="*" element={<Navigate to="/" replace />} />
                         </Routes>
                     </div>
-                </Router>)}
+                ) : (
+                    <Router>
+                        <Navbar
+                            activeTab={activeTab}
+                            setActiveTab={setActiveTab}
+                            signOut={setAuthenticated}
+                        />
+                        <div className="app-layout-feed-container">
+                            <Routes>
+                                <Route
+                                    path="/:username"
+                                    element={<Profile />}
+                                />
+                                <Route
+                                    path="/recipes"
+                                    element={<Recipe recipes={recipes} />}
+                                />
+                                <Route
+                                    path="/recipe/:recipeID"
+                                    element={<Instructions />}
+                                />
+                                <Route
+                                    path="/post"
+                                    element={<Post addRecipe={addRecipe} />}
+                                />
+                                <Route path="/" element={<Feed />} />
+
+                                {/* Redirect to the homepage or any specific route if authenticated */}
+                                <Route
+                                    path="*"
+                                    element={<Navigate to="/" replace />}
+                                />
+                            </Routes>
+                        </div>
+                    </Router>
+                )}
             </div>
         </div>
     );
