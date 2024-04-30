@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import BrowserRouter, Route, and Routes
 import { Navbar, JoySignInSideTemplate } from './components';
-import { Feed, Recipe } from './pages';
+import { Feed, Recipe, WelcomePage } from './pages';
 import './App.css';
 
 function App() {
