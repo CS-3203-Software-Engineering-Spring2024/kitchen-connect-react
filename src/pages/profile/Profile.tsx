@@ -33,7 +33,7 @@ const Profile: React.FC = () => {
 
             <div className="title-container">
             
-                <h2 className="profile-name">{user.name}</h2>
+                <h2 className="profile-name">Profile: {user.name}</h2>
 
             </div>
 
