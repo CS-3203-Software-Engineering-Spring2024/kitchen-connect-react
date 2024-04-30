@@ -2,7 +2,15 @@ import './post.css';
 
 import React, { useState } from 'react';
 
-const PostComponent: React.FC = () => {
+interface PostProps {
+    addRecipe: (newRecipe: {
+        image: File;
+        name: string;
+        tags: string[];
+    }) => void;
+}
+
+const PostComponent: React.FC<PostProps> = ({ addRecipe }) => {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [caption, setCaption] = useState('');
     const [tags, setTags] = useState('');
@@ -33,7 +41,13 @@ const PostComponent: React.FC = () => {
 
     const handlePost = () => {
         // Here you can handle the post logic, like sending the data to the server.
-        console.log('Posted:', { selectedFile, caption, tags });
+        const newRecipe = {
+            image: selectedFile, // Update the type to allow for null: File | null
+            name: caption,
+            tags: tags.split(',').map((tag) => tag.trim()),
+        };
+        addRecipe(newRecipe as { image: File; name: string; tags: string[] }); // Add type assertion to satisfy the function signature
+        console.log('Posted:', newRecipe);
     };
 
     return (
