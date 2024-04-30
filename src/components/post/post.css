@@ -2,3 +2,13 @@
     display: flex;
     flex-direction: column;
 }
+
+.post-file {
+    color: white;
+}
+
+.post-caption {
+}
+
+.post-tag {
+}
