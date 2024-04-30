@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import BrowserRouter, Route, and Routes
-import { Navbar, JoySignInSideTemplate } from './components';
+import { Navbar, JoySignInSideTemplate, Post } from './components';
 import { Feed, Recipe } from './pages';
 import './App.css';
 
@@ -29,15 +29,9 @@ function App() {
                         />
                         <div className="app-layout-feed-container">
                             <Routes>
-                                {' '}
-                                {/* Use the Routes component here */}
-                                <Route
-                                    path="/recipes"
-                                    element={<Recipe />}
-                                />{' '}
-                                {/* Define a route for the Recipe page */}
-                                <Route path="/" element={<Feed />} />{' '}
-                                {/* Define a route for the Feed component */}
+                                <Route path="/recipes" element={<Recipe />} />
+                                <Route path="/post" element={<Post />} />
+                                <Route path="/" element={<Feed />} />
                             </Routes>
                         </div>
                     </Router>
