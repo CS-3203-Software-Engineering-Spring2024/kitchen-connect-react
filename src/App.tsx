@@ -29,31 +29,11 @@ function App() {
     return (
         <div className="app">
             <div className="app-layout">
-            {!authenticated ? (
-                <div className="app-layout-sign-in">
-                    <JoySignInSideTemplate
-                        onSignInSuccess={handleSignInSuccess}
-                    />
-                </div>
-            ) : (
-                <Router>
-                    <Navbar
-                        activeTab={activeTab}
-                        setActiveTab={setActiveTab}
-                        signOut={setAuthenticated}
-                    />
-                    <div className="app-layout-feed-container">
-                        <Routes>
-                            <Route path="/profile/:username" element={<Profile />} />
-                            <Route path="/recipes" element={<Recipe recipes={recipes} />} />
-                            <Route path="/recipe/:recipeID" element={<Instructions />} />
-                            <Route path="/post" element={<Post addRecipe={addRecipe} />} />
-                            <Route path="/" element={<Feed />} />
-                            <Route path="/comments" element={<Comments />} />
-
-                            {/* Redirect to the homepage or any specific route if authenticated */}
-                            <Route path="*" element={<Navigate to="/" replace />} />
-                        </Routes>
+                {!authenticated ? (
+                    <div className="app-layout-sign-in">
+                        <JoySignInSideTemplate
+                            onSignInSuccess={handleSignInSuccess}
+                        />
                     </div>
                 ) : (
                     <Router>
@@ -65,7 +45,7 @@ function App() {
                         <div className="app-layout-feed-container">
                             <Routes>
                                 <Route
-                                    path="/:username"
+                                    path="/profile/:username"
                                     element={<Profile />}
                                 />
                                 <Route
@@ -79,6 +59,10 @@ function App() {
                                 <Route
                                     path="/post"
                                     element={<Post addRecipe={addRecipe} />}
+                                />
+                                <Route
+                                    path="/comments"
+                                    element={<Comments />}
                                 />
                                 <Route path="/" element={<Feed />} />
 
