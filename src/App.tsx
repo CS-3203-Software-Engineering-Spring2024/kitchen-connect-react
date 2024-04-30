@@ -45,7 +45,7 @@ function App() {
                         <div className="app-layout-feed-container">
                             <Routes>
                                 <Route
-                                    path="/profile/:username"
+                                    path="/:username"
                                     element={<Profile />}
                                 />
                                 <Route
@@ -65,12 +65,6 @@ function App() {
                                     element={<Comments />}
                                 />
                                 <Route path="/" element={<Feed />} />
-
-                                {/* Redirect to the homepage or any specific route if authenticated */}
-                                <Route
-                                    path="*"
-                                    element={<Navigate to="/" replace />}
-                                />
                             </Routes>
                         </div>
                     </Router>
