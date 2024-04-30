@@ -1,21 +1,27 @@
 import React, { useState, useEffect } from 'react';
 
+interface Following {
+    ID: string;
+    name: string;
+    url: string;
+}
+
 interface User {
-    ID: number;
+    ID: string;
     name: string;
     email: string;
     isPrivate: boolean;
-    followings: number[];
+    followings: Following[];
 }
 
 const Profile: React.FC = () => {
 
     const [user, setUser] = useState<User>({
-        ID: 1,
+        ID: '1',
         name: 'John Doe',
         email: 'john.doe@example.com',
         isPrivate: false,
-        followings: [2, 3, 4, 5]
+        followings: []
     });
 
     return (
@@ -27,12 +33,40 @@ const Profile: React.FC = () => {
 
             </div>
 
-            {!user.isPrivate && (
-                <div className="public-info-container">
+            {/*DISPLAYS ON OWN PROFILE*/}
+            {localStorage.getItem("user_id")==user.ID && (
 
-
+                <div className="own-profile-container">
 
                 </div>
+
+            )}
+
+            {/*DISPLAYS ON OTHER PROFILES*/}
+            {localStorage.getItem("user_id")==user.ID && (
+
+                <div className="other-profile-container">
+
+                    {/*DISPLAYS ON PUBLIC PROFILES*/}
+                    {!user.isPrivate && (
+
+                        <div className="public-info-container">
+
+                        </div>
+
+                    )}
+
+                    {/*DISPLAYS ON PRIVATE PROFILES*/}
+                    {user.isPrivate && (
+
+                        <div className="private-info-container">
+
+                        </div>
+                        
+                    )}
+
+                </div>
+
             )}
             
         </div>
