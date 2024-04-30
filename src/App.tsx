@@ -14,6 +14,9 @@ function App() {
 
     return (
         <div className="app">
+            <div className="app-welcome">
+                <WelcomePage />
+            </div>
             <div className="app-layout">
                 {!authenticated ? (
                     <div className="app-layout-sign-in">
