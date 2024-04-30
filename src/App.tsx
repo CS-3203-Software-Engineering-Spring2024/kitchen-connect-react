@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar, JoySignInSideTemplate, Post } from './components';
-import { Feed, Profile, Recipe, Instructions } from './pages';
+import { Feed, Profile, Recipe, Instructions, Comments } from './pages';
 import './App.css';
 
 type RecipeType = {
@@ -48,6 +48,7 @@ function App() {
                             <Route path="/recipe/:recipeID" element={<Instructions />} />
                             <Route path="/post" element={<Post addRecipe={addRecipe} />} />
                             <Route path="/" element={<Feed />} />
+                            <Route path="/comments" element={<Comments />} />
 
                             {/* Redirect to the homepage or any specific route if authenticated */}
                             <Route path="*" element={<Navigate to="/" replace />} />
