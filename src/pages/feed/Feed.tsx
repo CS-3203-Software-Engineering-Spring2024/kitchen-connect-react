@@ -14,13 +14,43 @@ import {
 // TODO: Change photos to not use Gordan Ramsey as example
 const Feed = () => {
     const [posts, setPosts] = useState([
-        { picture: gordonRamsey, content: anhnguyen, body: "test test test", author: "Gordan", id: 1 },
-        { picture: gordonRamsey, content: burgerWithLettuce, body: "test test2 test2", author: "Jon", id: 2 },
-        { picture: gordonRamsey, content: anhnguyen, body: "test test3 test3", author: "Gary", id: 3 },
-        { picture: gordonRamsey, content: anhnguyen, body: "test test4 test4", author: "Billy", id: 4 },
-        { picture: gordonRamsey, content: anhnguyen, body: "test test4 test4", author: "Karen", id: 5 }
+        {
+            picture: gordonRamsey,
+            content: anhnguyen,
+            body: 'test test test',
+            author: 'Gordan',
+            id: 1,
+        },
+        {
+            picture: gordonRamsey,
+            content: burgerWithLettuce,
+            body: 'test test2 test2',
+            author: 'Jon',
+            id: 2,
+        },
+        {
+            picture: gordonRamsey,
+            content: anhnguyen,
+            body: 'test test3 test3',
+            author: 'Gary',
+            id: 3,
+        },
+        {
+            picture: gordonRamsey,
+            content: anhnguyen,
+            body: 'test test4 test4',
+            author: 'Billy',
+            id: 4,
+        },
+        {
+            picture: gordonRamsey,
+            content: anhnguyen,
+            body: 'test test4 test4',
+            author: 'Karen',
+            id: 5,
+        },
     ]);
-// TODO: Add comment functionality on posts
+    // TODO: Add comment functionality on posts
     //const [comments, setComments] = useState([]);
 
     return (
