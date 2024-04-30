@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
 interface User {
-    ID: string;
+    ID: number;
     name: string;
     email: string;
     isPrivate: boolean;
-    followings: string[];
+    followings: number[];
 }
 
 const Profile: React.FC = () => {
 
     const [user, setUser] = useState<User>({
-        ID: '12345',
+        ID: 1,
         name: 'John Doe',
         email: 'john.doe@example.com',
         isPrivate: false,
-        followings: ['user2', 'user3', 'user4']
+        followings: [2, 3, 4, 5]
     });
 
     return (
@@ -30,7 +30,7 @@ const Profile: React.FC = () => {
             {!user.isPrivate && (
                 <div className="public-info-container">
 
-                
+
 
                 </div>
             )}
