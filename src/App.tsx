@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar, JoySignInSideTemplate, Post } from './components';
-import { Feed, Recipe } from './pages';
+import { Feed, Profile, Recipe } from './pages';
 import './App.css';
 
 type RecipeType = {
@@ -40,6 +40,9 @@ function App() {
                         />
                         <div className="app-layout-feed-container">
                             <Routes>
+                      
+                                <Route path="/profile/:username" element={<Profile />} />
+
                                 <Route
                                     path="/recipes"
                                     element={<Recipe recipes={recipes} />}
@@ -48,6 +51,7 @@ function App() {
                                     path="/post"
                                     element={<Post addRecipe={addRecipe} />}
                                 />
+
                                 <Route path="/" element={<Feed />} />
                             </Routes>
                         </div>
