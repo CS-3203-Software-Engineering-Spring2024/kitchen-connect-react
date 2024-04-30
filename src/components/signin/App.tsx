@@ -97,6 +97,16 @@ export default function JoySignInSideTemplate(
 
     const handleFormSubmit = (event: React.FormEvent<SignInFormElement>) => {
     
+        event.preventDefault();
+        const formElements = event.currentTarget.elements;
+        const email = formElements.email.value;
+        const password = formElements.password.value;
+
+        setNewSessionParams({
+            email: {email},
+            password: {password}
+          });
+
     axios.post('https://kitchen-connect-37ead1a6bb0d.herokuapp.com/sessions', newSessionParams)
       .then(response => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.jwt}`;
