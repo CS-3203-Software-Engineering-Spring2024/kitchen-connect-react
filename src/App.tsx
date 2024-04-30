@@ -41,7 +41,7 @@ function App() {
                         <div className="app-layout-feed-container">
                             <Routes>
                                 <Route
-                                    path="/profile/:username"
+                                    path="/:username"
                                     element={<Profile />}
                                 />
                                 <Route
