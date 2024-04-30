@@ -33,12 +33,12 @@ const Profile: React.FC = () => {
 
             <div className="title-container">
             
-                <h2 className="profile-name">{user.name}</h2>
+                <h2 className="profile-name">Profile: {user.name}</h2>
 
             </div>
 
             {/*DISPLAYS ON OWN PROFILE*/}
-            {localStorage.getItem("user_id")==user.ID && (
+            {localStorage.getItem("user_id")===user.ID && (
 
                 <div className="own-profile-container">
 
@@ -47,7 +47,7 @@ const Profile: React.FC = () => {
             )}
 
             {/*DISPLAYS ON OTHER PROFILES*/}
-            {localStorage.getItem("user_id")==user.ID && (
+            {localStorage.getItem("user_id")===user.ID && (
 
                 <div className="other-profile-container">
 
