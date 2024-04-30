@@ -116,7 +116,8 @@ export default function JoySignInSideTemplate(
         alert('Successfully logged in!'); // Placeholder for flash message
         // Redirect using React Router
         // window.history.pushState({}, '', '/'); // Basic way to navigate
-      })
+        props.onSignInSuccess();
+    })
       .catch(error => {
         console.error(error.response);
         setErrors(['Invalid email or password.']);
