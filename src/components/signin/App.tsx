@@ -129,6 +129,31 @@ export default function JoySignInSideTemplate(
 
     };
 
+    /*
+    return (
+    <div>
+      {errors.map((error, index) => (
+        <p key={index} style={{ color: 'red' }}>{error}</p>
+      ))}
+      <input
+        name="email"
+        type="email"
+        value={newSessionParams.email || ''}
+        onChange={handleInputChange}
+        placeholder="Email"
+      />
+      <input
+        name="password"
+        type="password"
+        value={newSessionParams.password || ''}
+        onChange={handleInputChange}
+        placeholder="Password"
+      />
+      <button onClick={submit}>Login</button>
+    </div>
+  );
+    */
+
     return (
         <CssVarsProvider defaultMode="dark" disableTransitionOnChange>
             <CssBaseline />
