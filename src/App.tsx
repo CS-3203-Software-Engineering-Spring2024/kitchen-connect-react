@@ -40,9 +40,10 @@ function App() {
                         />
                         <div className="app-layout-feed-container">
                             <Routes>
-                      
-                                <Route path="/profile/:username" element={<Profile />} />
-
+                                <Route
+                                    path="/profile/:username"
+                                    element={<Profile />}
+                                />
                                 <Route
                                     path="/recipes"
                                     element={<Recipe recipes={recipes} />}
@@ -55,7 +56,6 @@ function App() {
                                     path="/Comments"
                                     element={<Comments />}
                                 />{' '}
-
                                 <Route path="/" element={<Feed />} />
                             </Routes>
                         </div>

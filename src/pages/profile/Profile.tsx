@@ -16,7 +16,6 @@ interface User {
 }
 
 const Profile: React.FC = () => {
-
     const { username } = useParams();
 
     //MODIFY THIS TO GET THE USER JSON OBJECT BASED ON THE ABOVE USERNAME
@@ -25,57 +24,36 @@ const Profile: React.FC = () => {
         name: 'John Doe',
         email: 'john.doe@example.com',
         isPrivate: false,
-        followings: []
+        followings: [],
     });
 
     return (
         <div className="profile-page-container">
-
             <div className="title-container">
-            
                 <h2 className="profile-name">Profile: {user.name}</h2>
-
             </div>
 
             {/*DISPLAYS ON OWN PROFILE*/}
-            {localStorage.getItem("user_id")===user.ID && (
-
-                <div className="own-profile-container">
-
-                </div>
-
+            {localStorage.getItem('user_id') === user.ID && (
+                <div className="own-profile-container"></div>
             )}
 
             {/*DISPLAYS ON OTHER PROFILES*/}
-            {localStorage.getItem("user_id")===user.ID && (
-
+            {localStorage.getItem('user_id') === user.ID && (
                 <div className="other-profile-container">
-
                     {/*DISPLAYS ON PUBLIC PROFILES*/}
                     {!user.isPrivate && (
-
-                        <div className="public-info-container">
-
-                        </div>
-
+                        <div className="public-info-container"></div>
                     )}
 
                     {/*DISPLAYS ON PRIVATE PROFILES*/}
                     {user.isPrivate && (
-
-                        <div className="private-info-container">
-
-                        </div>
-
+                        <div className="private-info-container"></div>
                     )}
-
                 </div>
-
             )}
-            
         </div>
     );
-    
 };
 
 export default Profile;
