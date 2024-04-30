@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './feed.css';
 
 import {
@@ -50,8 +51,13 @@ const Feed = () => {
             id: 5,
         },
     ]);
-    // TODO: Add comment functionality on posts
-    //const [comments, setComments] = useState([]);
+    
+    const [postActions] = useState([
+        { name: 'Like', icon: likeIcon, path: '/', id: 1 },
+        { name: 'Comment', icon: commentIcon, path: '/Comments', id: 2 },
+        { name: 'Repost', icon: repostIcon, path: '/', id: 3 },
+        { name: 'Bookmark', icon: bookmarkIcon, path: '/', id: 4 },
+    ]);
 
     return (
         <div className="feed-container">
@@ -75,21 +81,14 @@ const Feed = () => {
                                 alt="Photo by Anh Nguyen on Unsplash"
                             />
                             <div className="post-actions">
-                                {/* Like button */}
-                                <button className="post-actions-button like-button">
-                                    <img src={likeIcon} alt="Like" />
-                                </button>
-                                {/* Comment button */}
-                                <button className="post-actions-button comment-button">
-                                    <img src={commentIcon} alt="Comment" />
-                                </button>
-                                {/* Repost button */}
-                                <button className="post-actions-button repost-button">
-                                    <img src={repostIcon} alt="Repost" />
-                                </button>
-                                <button className="post-actions-button save-button">
-                                    <img src={bookmarkIcon} alt="Save" />
-                                </button>
+                                    {/* Render post actions */}
+                                    {postActions.map((action) => (
+                                    <Link key={action.id} to={action.path}>
+                                        <button className="post-actions-button">
+                                            <img src={action.icon} alt={action.name} />
+                                        </button>
+                                    </Link>
+                                ))}         
                             </div>
                             <div className="caption-container">
                                 {/* Post caption */}
