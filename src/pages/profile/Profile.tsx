@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 interface Following {
     ID: string;
@@ -16,6 +17,9 @@ interface User {
 
 const Profile: React.FC = () => {
 
+    const { username } = useParams();
+
+    //MODIFY THIS TO GET THE USER JSON OBJECT BASED ON THE ABOVE USERNAME
     const [user, setUser] = useState<User>({
         ID: '1',
         name: 'John Doe',
@@ -62,7 +66,7 @@ const Profile: React.FC = () => {
                         <div className="private-info-container">
 
                         </div>
-                        
+
                     )}
 
                 </div>

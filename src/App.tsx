@@ -31,7 +31,7 @@ function App() {
                             <Routes>
                                 <Route path="/recipes" element={<Recipe />} />
                                 <Route path="/post" element={<Post />} />
-                                <Route path="/profile" element={<Profile />} />
+                                <Route path="/profile/:username" element={<Profile />} />
                                 <Route path="/" element={<Feed />} />
                             </Routes>
                         </div>
