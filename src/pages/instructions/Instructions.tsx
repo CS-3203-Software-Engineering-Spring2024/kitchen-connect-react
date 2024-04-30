@@ -6,7 +6,12 @@ interface Recipe {
     name: string;
     author: string;
 
+    description: string;
+    ingredients: string;
+    instructions: string;
 
+    tags: string;
+    image: string;
 }
 
 const Instructions: React.FC = () => {
@@ -17,7 +22,14 @@ const Instructions: React.FC = () => {
     const [recipe, setRecipe] = useState<Recipe>({
         ID: '1',
         name: 'Chicken and Rice',
-        author: 'John Doe'
+        author: 'John Doe',
+
+        description: "My Recipe",
+        ingredients: "Rice, Chicken",
+        instructions: "Cook Rice and Chicken",
+
+        tags: "Rice, Chicken",
+        image: ""
     });
 
     return (
