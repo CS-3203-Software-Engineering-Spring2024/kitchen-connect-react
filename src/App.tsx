@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar, JoySignInSideTemplate, Post } from './components';
-import { Feed, Profile, Recipe } from './pages';
+import { Feed, Profile, Recipe, Comments } from './pages';
 import './App.css';
 
 type RecipeType = {
@@ -51,6 +51,10 @@ function App() {
                                     path="/post"
                                     element={<Post addRecipe={addRecipe} />}
                                 />
+                                <Route
+                                    path="/Comments"
+                                    element={<Comments />}
+                                />{' '}
 
                                 <Route path="/" element={<Feed />} />
                             </Routes>
