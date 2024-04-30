@@ -13,6 +13,7 @@ import burgerWithLettuce from './burgerwithlettuce.jpg';
 import anhnguyen from './anhnguyen.jpg';
 import whiteDimSum from './whitedimsum.jpg';
 import likeIcon from './icons/likeicon.png';
+import likeIconColored from './icons/likeiconcolored.png';
 import commentIcon from './icons/commenticon.png';
 import repostIcon from './icons/reposticon.png';
 import gordonRamsey from './gordonramsey.jpg';
@@ -34,6 +35,7 @@ export {
     whiteDimSum,
     commentIcon,
     likeIcon,
+    likeIconColored,
     repostIcon,
     gordonRamsey,
     bookmarkIcon,

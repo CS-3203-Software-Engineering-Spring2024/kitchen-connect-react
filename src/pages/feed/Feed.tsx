@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
+//import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './feed.css';
 
@@ -6,6 +7,7 @@ import {
     anhnguyen,
     commentIcon,
     likeIcon,
+    likeIconColored,
     repostIcon,
     bookmarkIcon,
     gordonRamsey,
@@ -51,9 +53,54 @@ const Feed = () => {
             id: 5,
         },
     ]);
+
+    setPosts([
+        {
+            picture: gordonRamsey,
+            content: anhnguyen,
+            body: 'test test test',
+            author: 'Gordan',
+            id: 1,
+        },
+        {
+            picture: gordonRamsey,
+            content: burgerWithLettuce,
+            body: 'test test2 test2',
+            author: 'Jon',
+            id: 2,
+        },
+        {
+            picture: gordonRamsey,
+            content: anhnguyen,
+            body: 'test test3 test3',
+            author: 'Gary',
+            id: 3,
+        },
+        {
+            picture: gordonRamsey,
+            content: anhnguyen,
+            body: 'test test4 test4',
+            author: 'Billy',
+            id: 4,
+        },
+        {
+            picture: gordonRamsey,
+            content: anhnguyen,
+            body: 'test test4 test4',
+            author: 'Karen',
+            id: 5,
+        },
+    ]);
+
+    const [liked, setLiked] = useState(false); // State to track if liked
+
+    const toggleLike = () => {
+        setLiked(!liked); // Toggle the liked state
+        console.log('Like toggled', liked);
+    };
     
     const [postActions] = useState([
-        { name: 'Like', icon: likeIcon, path: '/', id: 1 },
+        { name: 'Like', icon: liked ? likeIconColored : likeIcon, onClick: toggleLike, path: '/', id: 1 },
         { name: 'Comment', icon: commentIcon, path: '/Comments', id: 2 },
         { name: 'Repost', icon: repostIcon, path: '/', id: 3 },
         { name: 'Bookmark', icon: bookmarkIcon, path: '/', id: 4 },
@@ -84,7 +131,7 @@ const Feed = () => {
                                     {/* Render post actions */}
                                     {postActions.map((action) => (
                                     <Link key={action.id} to={action.path}>
-                                        <button className="post-actions-button">
+                                        <button className="post-actions-button" key={action.id} onClick={action.onClick || (() => {})}>
                                             <img src={action.icon} alt={action.name} />
                                         </button>
                                     </Link>

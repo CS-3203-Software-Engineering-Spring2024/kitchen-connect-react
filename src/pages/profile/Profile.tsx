@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 interface Following {
@@ -18,6 +18,8 @@ interface User {
 const Profile: React.FC = () => {
     const { username } = useParams();
 
+    console.log(username);
+
     //MODIFY THIS TO GET THE USER JSON OBJECT BASED ON THE ABOVE USERNAME
     const [user, setUser] = useState<User>({
         ID: '1',
@@ -26,6 +28,14 @@ const Profile: React.FC = () => {
         isPrivate: false,
         followings: [],
     });
+
+    setUser(({
+        ID: '1',
+        name: 'John Doe',
+        email: 'john.doe@example.com',
+        isPrivate: false,
+        followings: [],
+    }));
 
     return (
         <div className="profile-page-container">

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import CssBaseline from '@mui/joy/CssBaseline';
@@ -60,7 +60,7 @@ function ColorSchemeToggle(props: IconButtonProps) {
     );
 }
 
-import axios from 'axios'
+//import axios from 'axios'
 
 export default function JoySignInSideTemplate(
     props: JoySignInSideTemplateProps
@@ -116,6 +116,12 @@ const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
             email: {email},
             password: {password}
         });
+
+        console.log(newSessionParams);
+
+        setErrors(
+            []
+        );
 
         /*
         axios.post('https://kitchen-connect-37ead1a6bb0d.herokuapp.com/sessions', newSessionParams)

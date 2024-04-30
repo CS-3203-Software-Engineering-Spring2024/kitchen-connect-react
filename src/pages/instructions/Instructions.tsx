@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 interface Recipe {
@@ -18,6 +18,8 @@ const Instructions: React.FC = () => {
 
     const { recipeID } = useParams();
 
+    console.log(recipeID);
+
     //USE RECIPE ID TO GET RECIPE FROM DATABASE
     const [recipe, setRecipe] = useState<Recipe>({
         ID: '1',
@@ -31,6 +33,19 @@ const Instructions: React.FC = () => {
         tags: "Rice, Chicken",
         image: ""
     });
+
+    setRecipe(({
+        ID: '1',
+        name: 'Chicken and Rice',
+        author: 'John Doe',
+
+        description: "My Recipe",
+        ingredients: "Rice, Chicken",
+        instructions: "Cook Rice and Chicken",
+
+        tags: "Rice, Chicken",
+        image: ""
+    }));
 
     return (
 
