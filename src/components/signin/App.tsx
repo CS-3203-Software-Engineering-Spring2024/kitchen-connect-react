@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import CssBaseline from '@mui/joy/CssBaseline';
@@ -60,9 +60,13 @@ function ColorSchemeToggle(props: IconButtonProps) {
     );
 }
 
+import axios from 'axios'
+
 export default function JoySignInSideTemplate(
     props: JoySignInSideTemplateProps
 ) {
+
+    /*
     const [error, setError] = React.useState<string>('');
 
     const handleFormSubmit = (event: React.FormEvent<SignInFormElement>) => {
@@ -85,6 +89,33 @@ export default function JoySignInSideTemplate(
         } else {
             setError('Invalid email or password');
         }
+    };
+    */
+
+    const [newSessionParams, setNewSessionParams] = useState({});
+    const [errors, setErrors] = useState<string[]>([]);
+
+    const handleFormSubmit = (event: React.FormEvent<SignInFormElement>) => {
+    
+    axios.post('https://kitchen-connect-37ead1a6bb0d.herokuapp.com/sessions', newSessionParams)
+      .then(response => {
+        axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.jwt}`;
+        localStorage.setItem('jwt', response.data.jwt);
+        localStorage.setItem('user_id', response.data.user_id);
+        // Assuming you're using something like react-toastify for flash messages
+        alert('Successfully logged in!'); // Placeholder for flash message
+        // Redirect using React Router
+        // window.history.pushState({}, '', '/'); // Basic way to navigate
+      })
+      .catch(error => {
+        console.error(error.response);
+        setErrors(['Invalid email or password.']);
+        setNewSessionParams({
+          email: '',
+          password: ''
+        });
+      });
+
     };
 
     return (
@@ -217,12 +248,12 @@ export default function JoySignInSideTemplate(
                                     <FormLabel>Password</FormLabel>
                                     <Input type="password" name="password" />
                                 </FormControl>
-                                {error && (
+                                {errors && (
                                     <Typography
                                         fontSize="sm"
                                         textColor="rgb(237, 73, 86)"
                                     >
-                                        {error}
+                                        {errors}
                                     </Typography>
                                 )}
                                 <Stack gap={4} sx={{ mt: 2 }}>
