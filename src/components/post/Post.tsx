@@ -51,19 +51,21 @@ const PostComponent: React.FC<PostProps> = ({ addRecipe }) => {
     };
 
     return (
-        <div>
+        <div className="post-container">
             <input type="file" onChange={handleFileChange} />
             <input
                 type="text"
                 placeholder="Add a caption..."
                 value={caption}
                 onChange={handleCaptionChange}
+                className="post-caption"
             />
             <input
                 type="text"
                 placeholder="Add tags..."
                 value={tags}
                 onChange={handleTagsChange}
+                className="post-tag"
             />
             <button onClick={handlePost}>Post</button>
         </div>
