@@ -7,7 +7,7 @@ const Testimonials = () => {
     <div className="work-section-wrapper">
         <div className="work-section-top">
             <p className="primary-subheading" >Testimonials</p>
-            <h1 className="primary-heading" >What Our Users Are Saying</h1>
+            <h1 className="primary-heading" >What Users Are Saying</h1>
         </div>
         <div className="testimonial-section-bottom">
             <img src={ProfilePic} alt="" />

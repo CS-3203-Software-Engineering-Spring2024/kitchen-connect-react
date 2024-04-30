@@ -55,7 +55,9 @@ const Navbar = () => {
     <h1 style={{ color: '#fe9e0d', fontSize: '40px', }}>KitchenConnect</h1>
     </div>
     <div className="navbar-links-container" >
-      <button className="primary-button">Login</button>
+      <a href="http://localhost:5173/">
+        <button className="primary-button">Login</button>
+      </a>
     </div>
     <div className="navbar-menu-container">
           <HiOutlineBars3 onClick={() => setOpenMenu(true)} />

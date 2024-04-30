@@ -21,7 +21,9 @@ const Home = () => {
             With KitchenConnect, your favorite recipe is one click away
           </p>
           <button className="secondary-button">
+            <a href="http://localhost:5173/">
             Sign Up <FiArrowRight />{" "}
+            </a>
           </button>
         </div>
         <div className="home-image-section">
