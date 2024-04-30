@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './navbar.css';
 
 import {
@@ -24,6 +25,7 @@ interface NavbarItem {
 interface NavbarProps {
     activeTab: string;
     setActiveTab: (tab: string) => void;
+    signOut: (b: boolean) => void;
 }
 
 const navbarItems: NavbarItem[] = [
@@ -35,12 +37,26 @@ const navbarItems: NavbarItem[] = [
     { name: 'Messages', icon: messagesIcon, path: '/messages' },
     { name: 'Recipes', icon: bookmarkIcon, path: '/recipes' },
     { name: 'Profile', icon: profileIcon, path: '/profile' },
-    { name: 'Sign Out', icon: signouticon, path: '/signout' },
 ];
 
-const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
+const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, signOut }) => {
+
+    const navigate = useNavigate();
+
     const handleTabClick = (tab: string) => {
         setActiveTab(tab);
+    };
+
+    const handleSignOut = () => {
+        // Implement your sign-out logic here
+        console.log('Signing out...'); // Placeholder for actual sign-out logic
+        // Redirect to login or other appropriate action
+        localStorage.removeItem('jwt')
+        localStorage.removeItem('user_id')
+
+        signOut(false);
+
+        navigate('/login');
     };
 
     return (
@@ -51,8 +67,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                 </div>
                 {navbarItems.map((item, index) => (
                     <Link to={item.path} key={index}>
-                        {' '}
-                        {/* Use the Link component here */}
                         <div
                             className={`navbar-item ${
                                 activeTab === item.name ? 'active' : ''
@@ -68,12 +82,23 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                         </div>
                     </Link>
                 ))}
+                <div
+                    className={`navbar-item ${
+                        activeTab === 'Sign Out' ? 'active' : ''
+                    }`}
+                    onClick={handleSignOut}
+                >
+                    <img
+                        className="navbar-item-logo"
+                        src={signouticon}
+                        alt="Sign Out"
+                    />
+                    Sign Out
+                </div>
             </div>
 
             <div className="navbar-bottom">
                 <Link to="/settings">
-                    {' '}
-                    {/* Use the Link component here */}
                     <div
                         className={`navbar-item ${
                             activeTab === 'Settings' ? 'active' : ''
