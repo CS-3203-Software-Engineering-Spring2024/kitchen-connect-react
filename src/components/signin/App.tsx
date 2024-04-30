@@ -95,6 +95,16 @@ export default function JoySignInSideTemplate(
     const [newSessionParams, setNewSessionParams] = useState({});
     const [errors, setErrors] = useState<string[]>([]);
 
+    /*
+const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setNewSessionParams(prevParams => ({
+      ...prevParams,
+      [name]: value
+    }));
+  };
+    */
+
     const handleFormSubmit = (event: React.FormEvent<SignInFormElement>) => {
     
         event.preventDefault();
