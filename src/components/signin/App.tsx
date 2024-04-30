@@ -142,7 +142,7 @@ const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         */
 
         localStorage.setItem('jwt', '1');
-        localStorage.setItem('user_id', '1');
+        localStorage.setItem('user_id', email);
 
         alert('Successfully logged in!');
 
